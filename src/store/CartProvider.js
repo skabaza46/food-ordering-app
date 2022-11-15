@@ -9,7 +9,7 @@ const defaultCartState = {
 
 const cartReducer = (state, action) => {
   // Add the item into the list
-  if (action.type == "ADD"){
+  if (action.type === "ADD"){
 
     const existingCartItemIndex = state.items.findIndex((item) => item.id === action.item.id);
 
@@ -40,7 +40,7 @@ const cartReducer = (state, action) => {
   }
 
   // Remove the item with the ID from the list
-  if (action.type == "REMOVE"){
+  if (action.type === "REMOVE"){
     const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.id
     )
